@@ -58,7 +58,7 @@ post '/recurring' do
     charge = Stripe::Charge.create(
       :amount => params[:amount], # this number should be in cents
       :currency => "usd",
-      :source => customer.id,
+      :customer => customer.id,
       :recurring => "true",
       :description => "Example Recurring Charge"
     )
