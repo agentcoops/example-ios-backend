@@ -22,7 +22,8 @@ post '/charge' do
   # Get the credit card details submitted by the form
   token = params[:stripeToken]
   country = params[:country]
-  Stripe.api_key = api_keys[country][0,1]
+
+  Stripe.api_key = api_keys[country[0,1]]
 
   # Create the charge on Stripe's servers - this will charge the user's card
   begin
@@ -47,7 +48,7 @@ post '/recurring' do
   # Get the credit card details submitted by the form
   token = params[:stripeToken]
   country = params[:country]
-  Stripe.api_key = api_keys[country][0,1]
+  Stripe.api_key = api_keys[country[0,1]]
   
   # Create the charge on Stripe's servers - this will charge the user's card
   begin
