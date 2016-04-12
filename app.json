@@ -1,10 +1,22 @@
 {
   "name": "Example Stripe iOS Backend",
   "description": "For testing the Stripe example iOS apps at github.com/stripe/stripe-ios",
-  "repository": "https://github.com/stripe/example-ios-backend",
+  "repository": "https://github.com/agentcoops/example-ios-backend",
   "keywords": ["ios", "stripe"],
   "env": {
-    "STRIPE_TEST_SECRET_KEY": {
+    "1": {
+      "description": "Find this at https://dashboard.stripe.com/account/apikeys (it'll look like sk_test_****)",
+      "required": true
+    },
+    "2": {
+      "description": "Find this at https://dashboard.stripe.com/account/apikeys (it'll look like sk_test_****)",
+      "required": true
+    },
+    "3": {
+      "description": "Find this at https://dashboard.stripe.com/account/apikeys (it'll look like sk_test_****)",
+      "required": true
+    },
+    "4": {
       "description": "Find this at https://dashboard.stripe.com/account/apikeys (it'll look like sk_test_****)",
       "required": true
     }
